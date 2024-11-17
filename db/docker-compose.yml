@@ -1,0 +1,13 @@
+volumes:
+  data:
+
+services:
+  postgres:
+    image: postgres:latest
+    environment:
+      - POSTGRES_USER=madrasaty
+      - POSTGRES_PASSWORD=1234
+    ports:
+      - 5432:5432
+    volumes:
+      - data:/var/lib/postgresql
